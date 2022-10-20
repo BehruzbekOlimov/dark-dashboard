@@ -1,0 +1,73 @@
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+/*::-webkit-scrollbar-track {*/
+/*    !*box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.29);*!*/
+/*}*/
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: #60606020;
+    -webkit-transition: background-color 6s;
+    transition: background-color 6s;
+    border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #808080;
+}
+
+.Mui-selected{
+    background-color: #282828 !important;
+}
+
+.main-bg{
+    background: url(https://picsum.photos/1920/1080);
+    /*position: relative;*/
+    background-size: cover;
+    /*backdrop-filter: saturate(1);*/
+}
+.main-bg>.overlay{
+    /*position: absolute;*/
+    /*z-index: -1;*/
+    /*backdrop-filter: grayscale(1);*/
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    /*overflow: hidden;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #000000aa;
+}
+
+.blur-2{
+    backdrop-filter: blur(2px);
+}
+
+.blur-4{
+    backdrop-filter: blur(4px);
+}
+
+.blur-5{
+    backdrop-filter: blur(5px);
+}
+
+.blur-8{
+    backdrop-filter: blur(8px);
+}
+
+.blur-12{
+    backdrop-filter: blur(12px);
+}
+
+.blur-20{
+    backdrop-filter: blur(20px);
+}
+
+.blur-50{
+    backdrop-filter: blur(50px);
+}
