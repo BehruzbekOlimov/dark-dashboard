@@ -18,7 +18,6 @@ const DashboardMenuList = ({current, setCurrentMenu, user}) => {
                 }).map( (page, index) => <ListItemButton key={index}
                                                          onClick={()=> {navigate(page.path); setCurrentMenu(page)}}
                                                          selected={current.name === page.name}
-                    // style={{backgroundColor: 'rgba(0,0,0,0.1)'}}
                 >
                     <ListItemIcon>
                         {

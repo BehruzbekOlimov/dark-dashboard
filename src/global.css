@@ -1,5 +1,6 @@
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
+    height: 8px;
 }
 
 /* Track */
@@ -17,7 +18,7 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #808080;
+    background-color: #60606060;
 }
 
 .Mui-selected{
@@ -30,14 +31,14 @@
     background-size: cover;
     /*backdrop-filter: saturate(1);*/
 }
-.main-bg>.overlay{
+.main-bg>.overlay {
     /*position: absolute;*/
     /*z-index: -1;*/
     /*backdrop-filter: grayscale(1);*/
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    /*overflow: hidden;*/
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

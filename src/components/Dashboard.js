@@ -130,7 +130,6 @@ export default function Dashboard({setInitialData, setInitialLoading, initialLoa
             </AppBar>
             <Drawer
                 variant="permanent"
-                // style={{border: "none"}}
                 open={open}
             >
                 <div style={{overflowX: "hidden", overflowY: "auto"}} className="vh-100 scroll-drawer">
@@ -161,9 +160,10 @@ export default function Dashboard({setInitialData, setInitialLoading, initialLoa
                     flexDirection: "column"
                 }}
             >
-                <Toolbar/>
+                {/*<Toolbar/>*/}
 
-                <Container maxWidth="xl" style={{boxSizing: "border-box", padding: 0, height: "100%"}} className="main-bg">
+                <Container maxWidth="xl" style={{boxSizing: "border-box", padding: 0, height: "100%", paddingTop: 64}}
+                           className="main-bg">
                     <div className="overlay py-3 px-4">
                         <PaginationComponent loading={initialLoading}
                                              show={currentMenu && currentMenu.pageable && currentMenu.pageable.show}
