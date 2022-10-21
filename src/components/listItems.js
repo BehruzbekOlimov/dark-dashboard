@@ -7,6 +7,7 @@ import ListItemText from '@mui/material/ListItemText';
 // import {ShortText} from "@mui/icons-material";
 import {useNavigate} from "react-router-dom";
 import pageList from "../utills/pageList";
+import {ShortText} from "@mui/icons-material";
 
 
 const DashboardMenuList = ({current, setCurrentMenu}) => {
@@ -22,7 +23,7 @@ const DashboardMenuList = ({current, setCurrentMenu}) => {
                 >
                     <ListItemIcon>
                         {
-                            page.icon
+                            page.icon?page.icon:<ShortText/>
                         }
                     </ListItemIcon>
                     <ListItemText primary={page.name} />

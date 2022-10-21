@@ -1,7 +1,7 @@
 import React from 'react';
 import {Helmet} from "react-helmet";
 
-const Error404 = () => {
+const Error404Page = () => {
   return (
     <div style={{paddingTop: 150}}>
         <Helmet>
@@ -14,4 +14,4 @@ const Error404 = () => {
   );
 };
 
-export default Error404;
+export default Error404Page;

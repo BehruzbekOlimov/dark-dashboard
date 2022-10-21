@@ -59,7 +59,7 @@ const Drawer = styled(MuiDrawer, {shouldForwardProp: (prop) => prop !== 'open'})
                 }),
                 width: theme.spacing(7),
                 [theme.breakpoints.up('sm')]: {
-                    width: theme.spacing(9),
+                    width: theme.spacing(7),
                 },
             }),
         },
@@ -131,6 +131,7 @@ export default function Dashboard({setInitialData, setInitialLoading, initialLoa
             </AppBar>
             <Drawer
                 variant="permanent"
+                // style={{border: "none"}}
                 open={open}
             >
                 <div style={{overflowX: "hidden", overflowY: "auto"}} className="vh-100 scroll-drawer">

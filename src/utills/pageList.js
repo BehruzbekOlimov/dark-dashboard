@@ -1,17 +1,24 @@
-// import First from "../pages/First";
-import Second from "../pages/Second";
+// import UserManagementPage from "../pages/UserManagementPage";
+import TestPage from "../pages/TestPage";
 import {roles} from "./constants";
-import {HomeWork, ShortText} from "@mui/icons-material";
-import Home from "../pages/Home";
-
+import {BugReport, Home, HomeWork, ManageAccounts, ShortText} from "@mui/icons-material";
+import HomePage from "../pages/HomePage";
+import UserManagementPage from "../pages/UserManagementPage";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
   {
     name: "Home",
     path: "home",
-    icon: <HomeWork/>,
-    element: (props)=><Home {...props}/>,
+    icon: <Home/>,
+    element: (props)=><HomePage {...props}/>,
+    roles: [roles.admin, roles.director]
+  },
+  {
+    name: "Users",
+    path: "user-management",
+    icon: <ManageAccounts/>,
+    element: (props)=><UserManagementPage {...props}/>,
     pageable: {
       show: true,
       fetchLink: '/user/users',
@@ -19,7 +26,7 @@ export default [
         from: null,
         to: null,
       },
-      size: 20,
+      size: 25,
       page: 0,
       sort: {
         desc: false,
@@ -33,10 +40,10 @@ export default [
     roles: [roles.admin, roles.director]
   },
   {
-    name: "Second",
-    path: "second",
-    icon: <ShortText/>,
-    element: (props)=><Second {...props}/>,
+    name: "Test",
+    path: "test",
+    icon: <BugReport/>,
+    element: (props)=><TestPage {...props}/>,
     roles: [roles.admin, roles.director]
   },
 ]

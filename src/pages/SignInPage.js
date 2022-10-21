@@ -21,7 +21,7 @@ import {Helmet} from "react-helmet";
 
 const theme = createTheme();
 
-export default function SignIn({setUser}) {
+export default function SignInPage({setUser}) {
   const [error, setError] = useState();
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate()
