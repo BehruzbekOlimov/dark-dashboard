@@ -50,7 +50,7 @@ const PaginationComponent = ({show = false, loading, refresh, setData, setLoadin
                 setLoading(false)
             })
         }
-    }, [refresh, page, size, pageable, orderBy, desc, fromDate, toDate]);
+    }, [refresh, page, size, pageable, orderBy, desc, fromDate, toDate, setData, setLoading]);
 
     return (
         <>

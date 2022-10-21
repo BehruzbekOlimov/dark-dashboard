@@ -11,33 +11,34 @@ import {PrivateRoute} from "./components/PrivateRoute";
 import {useState} from "react";
 
 function App() {
-  const [user, setUser] = useState(null);
-  const [initialData, setInitialData] = useState([]);
-  const [initialLoading, setInitialLoading] = useState(false);
+    const [user, setUser] = useState(null);
+    const [initialData, setInitialData] = useState([]);
+    const [initialLoading, setInitialLoading] = useState(false);
 
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path='*' element={<Error404Page/>}/>
-          <Route path="/" element={<Navigate to="/dashboard/home"/>}/>
-          <Route path='/sign-in' element={<SignInPage setUser={setUser}/>}/>
-          <Route path={'/dashboard'} element={
-            <PrivateRoute user={user} setUser={setUser}>
-              <Dashboard user={user}
-                         setInitialData={setInitialData}
-                         initialLoading={initialLoading}
-                         setInitialLoading={setInitialLoading}/>
-            </PrivateRoute>}>
-            <Route path='*' element={<Error404Page/>}/>
-            {pageList.map((page, i) => {
-              return <Route key={i} path={page.path} element={page.element({initialData, initialLoading, user})}/>
-            })}
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
-  );
+    return (
+        <div className="App">
+            <BrowserRouter>
+                <Routes>
+                    <Route path='*' element={<Error404Page/>}/>
+                    <Route path="/" element={<Navigate to="/dashboard/home"/>}/>
+                    <Route path='/sign-in' element={<SignInPage setUser={setUser}/>}/>
+                    <Route path={'/dashboard'} element={
+                        <PrivateRoute user={user} setUser={setUser}>
+                            <Dashboard user={user}
+                                       setInitialData={setInitialData}
+                                       initialLoading={initialLoading}
+                                       setInitialLoading={setInitialLoading}/>
+                        </PrivateRoute>}>
+                        <Route path='*' element={<Error404Page/>}/>
+                        {pageList.map((page, i) => {
+                            return <Route key={i} path={page.path}
+                                          element={page.element({initialData, initialLoading, user})}/>
+                        })}
+                    </Route>
+                </Routes>
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;

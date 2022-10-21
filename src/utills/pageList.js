@@ -1,7 +1,6 @@
-// import UserManagementPage from "../pages/UserManagementPage";
 import TestPage from "../pages/TestPage";
 import {roles} from "./constants";
-import {BugReport, Home, HomeWork, ManageAccounts, ShortText} from "@mui/icons-material";
+import {BugReport, Home, ManageAccounts} from "@mui/icons-material";
 import HomePage from "../pages/HomePage";
 import UserManagementPage from "../pages/UserManagementPage";
 

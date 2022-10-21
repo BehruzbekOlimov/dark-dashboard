@@ -17,14 +17,12 @@ function PrivateRoute({children, user, setUser}) {
             axiosClient.get("/user/get-me")
                 .then(res => {
                     setUser(res.data)
-                }).catch((e) => {
-                console.log(e)
-                localStorage.removeItem(LOCAL_STORAGE_NAME)
+                }).catch(() => {
                 navigate('/sign-in')
             })
             // not logged in so redirect to login page with the return url
         }
-    }, [user])
+    }, [user, navigate, setUser])
 
 
     // authorized so return child components
