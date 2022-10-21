@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
+import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import pageList from "./utills/pageList";
 import "bootstrap/dist/css/bootstrap-grid.min.css"
 import "bootstrap/dist/css/bootstrap-utilities.min.css"
@@ -14,7 +14,7 @@ function App() {
     const [user, setUser] = useState(null);
     const [initialData, setInitialData] = useState([]);
     const [initialLoading, setInitialLoading] = useState(false);
-
+    console.log(user)
     return (
         <div className="App">
             <BrowserRouter>

@@ -9,7 +9,7 @@ import {ShortText} from "@mui/icons-material";
 
 const DashboardMenuList = ({current, setCurrentMenu, user}) => {
     const navigate = useNavigate();
-
+    console.log(user)
     return (
         <>
             { user &&

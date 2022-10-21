@@ -9,11 +9,10 @@ import Container from '@mui/material/Container';
 import {ExitToAppSharp, Menu, Refresh} from "@mui/icons-material";
 import {ToastContainer} from "react-toastify";
 import DashboardMenuList from "./listItems";
-import {styled, createTheme, ThemeProvider} from '@mui/material/styles';
+import {createTheme, styled, ThemeProvider} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import MuiDrawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
-// import logo from '../asssets/images/logo-vatancabel.svg'
 import PaginationComponent from "./PaginationComponent";
 import pageList from "../utills/pageList";
 import {LOCAL_STORAGE_NAME} from "../utills/constants";
@@ -78,7 +77,7 @@ const mdTheme = createTheme({
     }
 });
 
-export default function Dashboard({setInitialData, setInitialLoading, initialLoading}) {
+export default function Dashboard({setInitialData, setInitialLoading, initialLoading, user}) {
     const [currentMenu, setCurrentMenu] = useState(pageList[0]);
     const [open, setOpen] = useState(false);
     const [refreshVal, setRefreshVal] = useState(0);
@@ -141,7 +140,7 @@ export default function Dashboard({setInitialData, setInitialLoading, initialLoa
                     </div>
                     <Divider/>
                     <List className="mt-2 pt-0">
-                        <DashboardMenuList current={currentMenu} setCurrentMenu={setCurrentMenu}/>
+                        <DashboardMenuList current={currentMenu} setCurrentMenu={setCurrentMenu} user={user}/>
                     </List>
                 </div>
 
